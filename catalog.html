@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог товаров магазина.">
+  <title>Каталог — Магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Магазин</a>
+      <button class="menu-toggle button" type="button" aria-expanded="false" aria-controls="site-menu" hidden>Меню</button>
+      <nav id="site-menu" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a aria-current="page" class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="page-container" id="main-content" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a class="breadcrumbs__link" href="index.html">Главная</a><span class="breadcrumbs__current">Каталог</span></nav>
+    <h1>Каталог</h1>
+    <div class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2>Категории</h2>
+        <ul>
+          <li><a href="#lighting">Освещение</a></li>
+          <li><a href="#desk">Для стола</a></li>
+          <li><a href="#notes">Блокноты</a></li>
+        </ul>
+        <form id="catalog-filter" class="catalog-filters__form" action="#" method="get">
+          <fieldset class="catalog-filters__fieldset">
+            <legend class="catalog-filters__legend">Категория</legend>
+            <label class="catalog-filters__label"><input class="catalog-filters__input" type="checkbox" name="category" value="all"> Все товары</label>
+            <label class="catalog-filters__label"><input class="catalog-filters__input" type="checkbox" name="category" value="popular"> Популярные</label>
+            <label class="catalog-filters__label"><input class="catalog-filters__input" type="checkbox" name="category" value="new"> Новинки</label>
+          </fieldset>
+          <fieldset class="catalog-filters__fieldset">
+            <legend class="catalog-filters__legend">Цена</legend>
+            <label class="catalog-filters__label" for="price-from">От</label>
+            <input class="order-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <label class="catalog-filters__label" for="price-to">До</label>
+            <input class="order-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+          </fieldset>
+          <button class="button button--primary" type="submit">Применить</button><button class="button button--secondary" type="reset">Сбросить</button>
+        </form>
+      </aside>
+      <section class="catalog-products">
+        <h2>Товары</h2>
+        <div class="products-grid products-grid--catalog">
+          <article class="product-card" id="lighting">
+            <a href="product.html"><img class="product-card__image" src="images/lamp.svg" alt="Настольная лампа"></a>
+            <span class="product-card__badge">Хит</span>
+            <h3 class="product-card__title"><a href="product.html">Лампа «Линия»</a></h3>
+            <p class="product-card__description">Для вечерней учёбы, чтения и работы за столом.</p>
+            <p class="product-card__price">1 490 ₽</p>
+            <a href="product.html">Подробнее</a>
+          </article>
+          <article class="product-card" id="desk">
+            <a href="product.html"><img class="product-card__image" src="images/organizer.svg" alt="Настольный органайзер"></a>
+            <span class="product-card__badge">Новинка</span>
+            <h3 class="product-card__title"><a href="product.html">Органайзер «Порядок»</a></h3>
+            <p class="product-card__description">Чтобы ручки и мелочи всегда были под рукой.</p>
+            <p class="product-card__price">890 ₽</p>
+            <a href="product.html">Подробнее</a>
+          </article>
+          <article class="product-card" id="notes">
+            <a href="product.html"><img class="product-card__image" src="images/notebook.svg" alt="Блокнот"></a>
+            <span class="product-card__badge">Скидка</span>
+            <h3 class="product-card__title"><a href="product.html">Блокнот «Точка опоры»</a></h3>
+            <p class="product-card__description">Для идей, заметок на парах и планов на день.</p>
+            <p class="product-card__price">320 ₽</p>
+            <a href="product.html">Подробнее</a>
+          </article>
+        </div>
+      <p id="filter-result" role="status"></p></section>
+    </div>
+  </main>
+
+
+  <footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>Магазин</p>
+    <a href="index.html">Главная</a>
+    <a href="order.html">Заявка</a>
+    <a href="contacts.html">Контакты</a>
+  </div>
+</footer>
+</body>
+</html>

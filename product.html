@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Описание и характеристики лампы «Линия».">
+  <title>Товар — Магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Магазин</a>
+      <button class="menu-toggle button" type="button" aria-expanded="false" aria-controls="site-menu" hidden>Меню</button>
+      <nav id="site-menu" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a aria-current="page" class="site-nav__link site-nav__link--active" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="page-container" id="main-content" tabindex="-1">
+    <h1>Лампа «Линия»</h1>
+    <section class="product-detail">
+      <img class="product-detail__image" src="images/lamp.svg" alt="Настольная лампа">
+      <div>
+        <p>Для вечерней учёбы, чтения и работы за столом.</p>
+        <p class="product-detail__price">1 490 ₽</p>
+        <a class="button" href="order.html">Оставить заявку</a>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Характеристики</h2>
+      <div class="table-wrapper" tabindex="0" role="region" aria-label="Характеристики товара"><table class="spec-table">
+        <caption>Характеристики лампы</caption>
+        <thead>
+          <tr><th scope="col">Параметр</th><th scope="col">Значение</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Материал</th><td>Металл</td></tr>
+          <tr><th scope="row">Цвет</th><td>Жёлтый</td></tr>
+          <tr><th scope="row">Высота</th><td>38 см</td></tr>
+          <tr><th scope="row">Цена</th><td>1 490 ₽</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>Магазин</p>
+      <a href="index.html#advantages">Преимущества</a>
+      <a href="index.html#popular">Популярные товары</a>
+      <a href="index.html#contacts">Контакты</a>
+    </div>
+  </footer>
+</body>
+</html>

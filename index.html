@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интернет-магазин предметов для рабочего стола.">
+  <title>Главная — Магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">Магазин</a>
+      <button class="menu-toggle button" type="button" aria-expanded="false" aria-controls="site-menu" hidden>Меню</button>
+      <nav id="site-menu" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a aria-current="page" class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero page-container">
+      <div>
+        <h1 class="hero__title">Предметы для рабочего стола</h1>
+        <p>Лампы, органайзеры и блокноты для учёбы и работы.</p>
+        <a class="button" href="catalog.html">Перейти в каталог</a>
+      </div>
+      <picture><source media="(max-width: 600px)" srcset="images/lamp-mobile.svg"><img class="hero__image" src="images/lamp.svg" alt="Жёлтая настольная лампа на зелёной подставке" width="440" height="360"></picture>
+    </section>
+
+
+    <section class="page-container" id="advantages">
+      <h2>Преимущества</h2>
+      <ul>
+        <li>Понятные характеристики товаров.</li>
+        <li>Несколько полезных предметов для рабочего стола.</li>
+        <li>Можно оставить заявку на товар.</li>
+      </ul>
+    </section>
+
+
+    <section class="page-container" id="about">
+      <h2>О магазине</h2>
+      <p>Лампы, органайзеры и блокноты для удобного рабочего места.</p>
+    </section>
+
+
+    <section class="page-container" id="popular">
+      <h2>Популярные товары</h2>
+      <div class="products-grid">
+        <article class="product-card">
+          <a href="product.html"><img class="product-card__image" src="images/lamp.svg" alt="Настольная лампа"></a>
+          <span class="product-card__badge">Хит</span>
+          <h3 class="product-card__title"><a href="product.html">Лампа «Линия»</a></h3>
+          <p class="product-card__description">Для вечерней учёбы, чтения и работы за столом.</p>
+          <p class="product-card__price">1 490 ₽</p>
+          <a href="product.html">Подробнее</a>
+          <button class="button product-card__button" type="button" data-product="Лампа «Линия»">Заказать</button>
+        </article>
+        <article class="product-card">
+          <a href="product.html"><img class="product-card__image" src="images/organizer.svg" alt="Настольный органайзер"></a>
+          <span class="product-card__badge">Новинка</span>
+          <h3 class="product-card__title"><a href="product.html">Органайзер «Порядок»</a></h3>
+          <p class="product-card__description">Чтобы ручки и мелочи всегда были под рукой.</p>
+          <p class="product-card__price">890 ₽</p>
+          <a href="product.html">Подробнее</a>
+          <button class="button product-card__button" type="button" data-product="Органайзер «Порядок»">Заказать</button>
+        </article>
+        <article class="product-card">
+          <a href="product.html"><img class="product-card__image" src="images/notebook.svg" alt="Блокнот"></a>
+          <span class="product-card__badge">Скидка</span>
+          <h3 class="product-card__title"><a href="product.html">Блокнот «Точка опоры»</a></h3>
+          <p class="product-card__description">Для идей, заметок на парах и планов на день.</p>
+          <p class="product-card__price">320 ₽</p>
+          <a href="product.html">Подробнее</a>
+          <button class="button product-card__button" type="button" data-product="Блокнот «Точка опоры»">Заказать</button>
+        </article>
+      </div>
+    </section>
+
+
+    <aside class="aside-info page-container">
+      <h2>Для рабочего места</h2>
+      <p>Подберите лампу, органайзер или блокнот для учёбы и работы.</p>
+    </aside>
+
+
+    <section class="page-container" id="contacts">
+      <h2>Нужна помощь?</h2>
+      <p>Напишите нам или оставьте заявку.</p>
+      <a href="contacts.html">Контакты</a>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>Магазин</p>
+    <a href="index.html#advantages">Преимущества</a>
+    <a href="index.html#popular">Популярные товары</a>
+    <a href="index.html#contacts">Контакты</a>
+  </div>
+</footer>
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input class="order-form__input" id="order-name" name="name" type="text" placeholder="Введите ваше имя" minlength="2" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input class="order-form__input" id="order-email" name="email" type="email" placeholder="example@mail.ru" required>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">Телефон</label>
+        <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+        <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-date">Дата связи</label>
+        <input class="order-form__input" id="order-date" name="date" type="date">
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-topic">Тема заявки</label>
+        <select class="order-form__select" id="order-topic" name="topic" required>
+          <option value="">Выберите тему</option>
+          <option value="product">Заказ товара</option>
+          <option value="consultation">Консультация</option>
+          <option value="delivery">Доставка</option>
+        </select>
+      </div>
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4" placeholder="Комментарий"></textarea>
+      </div>
+      <div class="order-form__field order-form__field--checkbox">
+        <label class="order-form__label" for="order-agreement"><input class="order-form__input" id="order-agreement" name="agreement" type="checkbox" required> Я согласен на обработку данных</label>
+      </div>
+      <div class="order-form__actions">
+        <button type="button" id="close-order-dialog" class="button button--secondary">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+  <p class="success-message" role="status" tabindex="-1" id="success-message" hidden>Всё заполнено! Проверьте выбранный товар и свои данные.</p>
+</body>
+</html>
